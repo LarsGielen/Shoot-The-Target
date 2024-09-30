@@ -3,6 +3,22 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private GameObject bulletHolePrefab;  // Verwijs naar je bullet hole prefab
+    [SerializeField] private float bulletLiveTime = 3f; // Bullet live time of 3 seconsd
+    private float timeSpawned;
+
+    void Update()
+    {
+        // Delete bullet if existing to long
+        if (Time.time - timeSpawned >= bulletLiveTime){
+            Destroy(gameObject);
+            Debug.Log("Bullet deleted, lived to long...");
+        }
+    }
+
+    private void Awake()
+    {
+        timeSpawned = Time.time;
+    }
 
     void OnCollisionEnter(Collision collision)
     {

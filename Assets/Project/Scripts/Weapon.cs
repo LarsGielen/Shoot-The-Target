@@ -39,7 +39,7 @@ public class Weapon : MonoBehaviour
         UpdateCanvas();
     }
 
-    public void shoot()
+    public void Shoot()
     {
         // Check delay tussen shots en bullet amount, een van beide niet goed -> return
         if (Time.time - timeLastShot < delayBetweenShots || bullets <= 0) {
@@ -63,6 +63,7 @@ public class Weapon : MonoBehaviour
         sphere.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 
         Rigidbody rb = sphere.AddComponent<Rigidbody>();
+        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rb.mass = bulletMass;
         rb.velocity = sphere.transform.forward * bulletSpeed;
 
