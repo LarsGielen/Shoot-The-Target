@@ -9,9 +9,9 @@ public class MovableTarget : MonoBehaviour
     }
 
     [Header("Movement Settings")]
-    public MovementDirection movementDirection;
-    public float speed = 5.0f;
-    public float travelDistance = 5.0f;
+    [SerializeField] MovementDirection movementDirection;
+    [SerializeField] float speed = 5.0f;
+    [SerializeField] float travelDistance = 5.0f;
 
     private Vector3 startPosition;
     private Vector3 targetPosition;

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b398b73bc100f3b4596457efdad2e50c
+=======
+guid: f0fd44ce8adacbb4da456393bf2270c4
+>>>>>>> origin/pexBranch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
