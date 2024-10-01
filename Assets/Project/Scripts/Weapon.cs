@@ -6,8 +6,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour
 {
+    [Header("Weapon Settings")]
     [SerializeField] float bulletMass;
     [SerializeField] float bulletSpeed;
     [SerializeField] int magazineSize;
@@ -16,6 +18,11 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject bulletHolePrefab;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] GameObject bulletSpawnPoint;
+
+    [Header("Audio Settings")]
+    AudioSource audioSource;
+    [SerializeField] AudioClip audioClip;
+
     private float timeLastShot;
     private int bullets;
 
@@ -36,6 +43,7 @@ public class Weapon : MonoBehaviour
 
     private void Awake() {
         bullets = magazineSize;
+        audioSource = GetComponent<AudioSource>();
         UpdateCanvas();
     }
 
@@ -73,6 +81,8 @@ public class Weapon : MonoBehaviour
         // Verander materiaal of kleur (optioneel)
         Renderer renderer = sphere.GetComponent<Renderer>();
         renderer.material.color = Color.yellow;
+
+        audioSource.PlayOneShot(audioClip);
     }
 
     private void UpdateCanvas()
