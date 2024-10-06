@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 
 [RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour
@@ -18,6 +19,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject bulletHolePrefab;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] GameObject bulletSpawnPoint;
+    [SerializeField] VisualEffect muzzleFlash;
+    [SerializeField] LightFlash muzzleFlashPointLight;
 
     [Header("Audio Settings")]
     AudioSource audioSource;
@@ -83,6 +86,11 @@ public class Weapon : MonoBehaviour
         renderer.material.color = Color.yellow;
 
         audioSource.PlayOneShot(audioClip);
+        
+        if (muzzleFlash != null || muzzleFlashPointLight != null) {
+            muzzleFlash.Play();
+            muzzleFlashPointLight.Flash();
+        }
     }
 
     private void UpdateCanvas()
