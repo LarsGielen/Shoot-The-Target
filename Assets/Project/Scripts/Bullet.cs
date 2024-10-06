@@ -43,11 +43,12 @@ public class Bullet : MonoBehaviour
 
             // Plaats een bullet hole op de locatie van de impact
             ContactPoint contact = collision.contacts[0];
-            Quaternion rotation = Quaternion.LookRotation(contact.normal);  // Draai zodat het gat loodrecht op het oppervlak staat
-            Vector3 position = contact.point + contact.normal*0.01f;  // Impactlocatie
+            Quaternion rotation = Quaternion.LookRotation(-contact.normal);  // Draai zodat het gat loodrecht op het oppervlak staat
+            Vector3 position = contact.point;  // Impactlocatie
 
             // Instantieer de bullet hole prefab op de juiste plaats en rotatie
-            Instantiate(bulletHolePrefab, position, rotation);
+            GameObject bulletHole = Instantiate(bulletHolePrefab, position, rotation);
+            bulletHole.transform.Rotate(Vector3.forward, Random.Range(0f, 360f), Space.Self);
         }
         else {
             // Do nothing

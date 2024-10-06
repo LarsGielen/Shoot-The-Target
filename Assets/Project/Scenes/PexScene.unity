@@ -586,7 +586,7 @@ MonoBehaviour:
   magazineSize: 6
   reloadTime: 2.5
   delayBetweenShots: 1.25
-  bulletHolePrefab: {fileID: 3852848652530351262, guid: 3829273da9b416a44a1bf12b9bc6d007, type: 3}
+  bulletHolePrefab: {fileID: 7323777115103201978, guid: bdfc175f333c1cd408eaa9dbc9aedfab, type: 3}
   text: {fileID: 271647798}
   bulletSpawnPoint: {fileID: 1802585813}
   muzzleFlash: {fileID: 1483989086}
@@ -2884,7 +2884,7 @@ MonoBehaviour:
   magazineSize: 30
   reloadTime: 1
   delayBetweenShots: 0.15
-  bulletHolePrefab: {fileID: 3852848652530351262, guid: 3829273da9b416a44a1bf12b9bc6d007, type: 3}
+  bulletHolePrefab: {fileID: 7323777115103201978, guid: bdfc175f333c1cd408eaa9dbc9aedfab, type: 3}
   text: {fileID: 538479931}
   bulletSpawnPoint: {fileID: 325111435}
   muzzleFlash: {fileID: 447102697}
@@ -3827,7 +3827,7 @@ MonoBehaviour:
   magazineSize: 14
   reloadTime: 1
   delayBetweenShots: 0.25
-  bulletHolePrefab: {fileID: 3852848652530351262, guid: 3829273da9b416a44a1bf12b9bc6d007, type: 3}
+  bulletHolePrefab: {fileID: 7323777115103201978, guid: bdfc175f333c1cd408eaa9dbc9aedfab, type: 3}
   text: {fileID: 832741047}
   bulletSpawnPoint: {fileID: 1584073356}
   muzzleFlash: {fileID: 994316663}
@@ -5027,7 +5027,7 @@ MonoBehaviour:
   magazineSize: 4
   reloadTime: 10
   delayBetweenShots: 5
-  bulletHolePrefab: {fileID: 3852848652530351262, guid: 3829273da9b416a44a1bf12b9bc6d007, type: 3}
+  bulletHolePrefab: {fileID: 7323777115103201978, guid: bdfc175f333c1cd408eaa9dbc9aedfab, type: 3}
   text: {fileID: 1130319449}
   bulletSpawnPoint: {fileID: 935461793}
   muzzleFlash: {fileID: 1123173456}
