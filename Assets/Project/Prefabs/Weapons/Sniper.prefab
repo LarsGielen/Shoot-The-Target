@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1850500066651103074}
   - component: {fileID: 5568264378765135398}
   - component: {fileID: 4351689568631615034}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7827397949837504939}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Scope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 974107492788275795}
   - component: {fileID: 3910093780071526060}
   - component: {fileID: 8156834538944578096}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Scope Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 2682894035206188798}
   - component: {fileID: 6474969392943185614}
   - component: {fileID: 2074509468665672551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5471100857577082286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttachPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6099812649106300558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 6413035736801139230}
   - component: {fileID: 3634332120630881248}
   - component: {fileID: 4635583662222995193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,11 +584,11 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -633,8 +633,8 @@ MonoBehaviour:
   bulletHolePrefab: {fileID: 7323777115103201978, guid: bdfc175f333c1cd408eaa9dbc9aedfab, type: 3}
   text: {fileID: 286490084432985245}
   bulletSpawnPoint: {fileID: 5330474648799000698}
-  muzzleFlash: {fileID: 0}
-  muzzleFlashPointLight: {fileID: 0}
+  muzzleFlash: {fileID: 5060567684227525024}
+  muzzleFlashPointLight: {fileID: 4351689568631615034}
   audioClip: {fileID: 0}
 --- !u!82 &4635583662222995193
 AudioSource:
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 5384537921640100301}
   - component: {fileID: 2763688855210206488}
   - component: {fileID: 286490084432985245}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 2716172409254580244}
   - component: {fileID: 4141612759208782660}
   - component: {fileID: 6198094439189078633}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4402671401945878618}
   - component: {fileID: 6915530119567127720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Reticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6443470130051282435}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 639986639337557671}
   - component: {fileID: 5060567684227525024}
   - component: {fileID: 2978170505469454064}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,6 +1292,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60d91f925d8c1e442bb6596dfb94ffff, type: 3}
       propertyPath: m_Name
       value: Visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60d91f925d8c1e442bb6596dfb94ffff, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 60d91f925d8c1e442bb6596dfb94ffff, type: 3}
       propertyPath: m_TagString

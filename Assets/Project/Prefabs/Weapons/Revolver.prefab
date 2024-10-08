@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4193673545673543471}
   - component: {fileID: 633904170440366975}
   - component: {fileID: 3025834204159423562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Revolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,8 +156,8 @@ MonoBehaviour:
   bulletHolePrefab: {fileID: 7323777115103201978, guid: bdfc175f333c1cd408eaa9dbc9aedfab, type: 3}
   text: {fileID: 1999088735509782640}
   bulletSpawnPoint: {fileID: 4165564684054692568}
-  muzzleFlash: {fileID: 0}
-  muzzleFlashPointLight: {fileID: 0}
+  muzzleFlash: {fileID: 947536227108447619}
+  muzzleFlashPointLight: {fileID: 2953840876827507053}
   audioClip: {fileID: 0}
 --- !u!54 &633904170440366975
 Rigidbody:
@@ -279,11 +279,11 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 669507839974986368}
   - component: {fileID: 8427106418077193712}
   - component: {fileID: 2953840876827507053}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2632464464244000004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8516877682540629639}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 231829925229074213}
   - component: {fileID: 6546910134868050749}
   - component: {fileID: 1999088735509782640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 1718863738782237778}
   - component: {fileID: 5118994956104615877}
   - component: {fileID: 4553711067205702518}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 8780853239346339765}
   - component: {fileID: 947536227108447619}
   - component: {fileID: 233011029930740649}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +814,39 @@ VisualEffect:
     m_AnimationCurve:
       m_Array: []
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 11.984314, g: 2.3074348, b: 0, a: 0}
+          key1: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
+          key2: {r: 0, g: 0, b: 0, a: 0.3137255}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 19918
+          ctime2: 65535
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 6554
+          atime2: 13364
+          atime3: 65535
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_ColorSpace: -1
+          m_NumColorKeys: 3
+          m_NumAlphaKeys: 4
+        m_Name: MuzzleFlashGradient
+        m_Overridden: 0
     m_NamedObject:
       m_Array: []
     m_Bool:
@@ -933,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4df3ce82db8e66645afd54ab1d5b0262, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4df3ce82db8e66645afd54ab1d5b0262, type: 3}
       propertyPath: m_TagString

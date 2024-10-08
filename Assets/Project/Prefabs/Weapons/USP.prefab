@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2834205139251426667}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4532458267094697378}
   - component: {fileID: 6873798261517238390}
   - component: {fileID: 1852312478046003619}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3/4
+  m_text: 14/14
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8896071439216495504}
   - component: {fileID: 1380322732463827170}
   - component: {fileID: 7912364125764266146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1630149612964331129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 6184297651242196454}
   - component: {fileID: 5645112590259869043}
   - component: {fileID: 3375250455693351353}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: USP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,11 +488,11 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -537,8 +537,8 @@ MonoBehaviour:
   bulletHolePrefab: {fileID: 7323777115103201978, guid: bdfc175f333c1cd408eaa9dbc9aedfab, type: 3}
   text: {fileID: 1852312478046003619}
   bulletSpawnPoint: {fileID: 586730836402120637}
-  muzzleFlash: {fileID: 0}
-  muzzleFlashPointLight: {fileID: 0}
+  muzzleFlash: {fileID: 7774479895487471409}
+  muzzleFlashPointLight: {fileID: 7912364125764266146}
   audioClip: {fileID: 0}
 --- !u!82 &3375250455693351353
 AudioSource:
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 2418816688759703774}
   - component: {fileID: 7774479895487471409}
   - component: {fileID: 625931448177144166}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 1454518761110180595}
   - component: {fileID: 422246773995433048}
   - component: {fileID: 4946372510911042426}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.124}
-  m_SizeDelta: {x: 0.195, y: 0.12253}
+  m_SizeDelta: {x: 0.2605, y: 0.1294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7860594710201095387
 Canvas:
@@ -933,7 +933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca1c64f7c147fb0479f9ef03e264a372, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca1c64f7c147fb0479f9ef03e264a372, type: 3}
       propertyPath: m_TagString

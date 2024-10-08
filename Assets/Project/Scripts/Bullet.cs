@@ -22,37 +22,23 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Controleer of het object de "Target" tag heeft
-        if (collision.gameObject.CompareTag("Target")) {
-            Debug.Log("Bullet hit a target!");
+        Debug.Log("Bullet hit something else!");
 
-            // Voer logica uit voor targets (bijv. schade toebrengen)
-
-            // Verwijder de kogel zelf
-            Destroy(gameObject);
+        // Verwijder de kogel
+        Destroy(gameObject);
+        
+        if (bulletHolePrefab == null) {
+            return;
         }
-        else if (collision.gameObject.CompareTag("Terrain")) {
-            Debug.Log("Bullet hit something else!");
 
-            // Verwijder de kogel
-            Destroy(gameObject);
-            
-            if (bulletHolePrefab == null) {
-                return;
-            }
+        // Plaats een bullet hole op de locatie van de impact
+        ContactPoint contact = collision.contacts[0];
+        Quaternion rotation = Quaternion.LookRotation(-contact.normal);  // Draai zodat het gat loodrecht op het oppervlak staat
+        Vector3 position = contact.point;  // Impactlocatie
 
-            // Plaats een bullet hole op de locatie van de impact
-            ContactPoint contact = collision.contacts[0];
-            Quaternion rotation = Quaternion.LookRotation(-contact.normal);  // Draai zodat het gat loodrecht op het oppervlak staat
-            Vector3 position = contact.point;  // Impactlocatie
-
-            // Instantieer de bullet hole prefab op de juiste plaats en rotatie
-            GameObject bulletHole = Instantiate(bulletHolePrefab, position, rotation);
-            bulletHole.transform.Rotate(Vector3.forward, Random.Range(0f, 360f), Space.Self);
-        }
-        else {
-            // Do nothing
-        }
+        // Instantieer de bullet hole prefab op de juiste plaats en rotatie
+        GameObject bulletHole = Instantiate(bulletHolePrefab, position, rotation);
+        bulletHole.transform.Rotate(Vector3.forward, Random.Range(0f, 360f), Space.Self);
     }
 
     public void SetBulleHolePrefab(GameObject bulletHolePrefab)

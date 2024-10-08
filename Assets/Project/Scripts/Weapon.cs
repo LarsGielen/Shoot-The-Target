@@ -64,7 +64,7 @@ public class Weapon : MonoBehaviour
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
         sphere.tag = "Bullet";
-        // sphere.layer = LayerMask.NameToLayer("Bullet");
+        sphere.layer = LayerMask.NameToLayer("Bullet");
         
         // Stel positie in
         sphere.transform.position = bulletSpawnPoint.transform.position;
