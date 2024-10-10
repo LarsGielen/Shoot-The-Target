@@ -81,7 +81,6 @@ public class Target : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             ScoreManager.instance.AddScore(points);
-            Destroy(gameObject);
         }
     }
 }
