@@ -118,13 +118,30 @@ public class Target : MonoBehaviour
         if (currentHitText != null)
         {
             StopCoroutine(HideHitText());
+            StopCoroutine(AnimateHitText(currentHitText));
             currentHitText.text = "";
         }
 
         currentHitText = hitTextOptions[Random.Range(0, hitTextOptions.Length)];
         currentHitText.text = points.ToString();
+        StartCoroutine(AnimateHitText(currentHitText));
         StartCoroutine(HideHitText());
     }
+
+    private IEnumerator AnimateHitText(TextMeshProUGUI hitText)
+    {
+
+        Color originalColor = hitText.color;
+        Vector3 originalScale = hitText.transform.localScale;
+
+        hitText.transform.localScale = originalScale * 1.5f;
+        hitText.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+
+        hitText.transform.localScale = originalScale;
+        hitText.color = originalColor;
+    }
+
 
     private IEnumerator HideHitText()
     {
