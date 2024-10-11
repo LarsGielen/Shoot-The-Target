@@ -53,11 +53,11 @@ public class WeaponController : MonoBehaviour
     {
         // Debug.Log(shootActionLeft.action.ReadValue<float>());
         if (shootActionLeft.action.ReadValue<float>() >= 0.7f && weaponLeft != null){
-            Debug.Log("shoot left");
+            // Debug.Log("shoot left");
             weaponLeft.Shoot();
         }
         if (shootActionRight.action.ReadValue<float>() >= 0.7f && weaponRight != null){
-            Debug.Log("shoot right");
+            // Debug.Log("shoot right");
             weaponRight.Shoot();
         }
     }

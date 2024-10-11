@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Bullet hit something else!");
+        // Debug.Log("Bullet hit something else!");
 
         // Verwijder de kogel
         Destroy(gameObject);
@@ -39,6 +39,7 @@ public class Bullet : MonoBehaviour
         // Instantieer de bullet hole prefab op de juiste plaats en rotatie
         GameObject bulletHole = Instantiate(bulletHolePrefab, position, rotation);
         bulletHole.transform.Rotate(Vector3.forward, Random.Range(0f, 360f), Space.Self);
+        bulletHole.transform.SetParent(collision.transform, true);
     }
 
     public void SetBulleHolePrefab(GameObject bulletHolePrefab)
