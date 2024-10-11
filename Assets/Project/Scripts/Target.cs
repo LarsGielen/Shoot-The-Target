@@ -20,11 +20,25 @@ public class Target : MonoBehaviour
     [SerializeField] int points = 10;
     [SerializeField] GameObject canvas;
 
+    [Header("Audio Settings")]
+    [SerializeField] AudioClip hitSound;
+    AudioSource audioSource;
+     
     private Vector3 startPosition;
     private Vector3 targetPosition;
     private bool movingTowardsTarget = true;
     private TextMeshProUGUI[] hitTextOptions;
     private TextMeshProUGUI currentHitText;
+
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.Log("audioSource is null");
+        }
+    }
 
     void Start()
     {
@@ -88,8 +102,15 @@ public class Target : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             ScoreManager.instance.AddScore(points);
+
+            PlayHitSound();
             DisplayHitPoints();
         }
+    }
+
+    private void PlayHitSound()
+    {
+        audioSource.PlayOneShot(hitSound);
     }
 
     private void DisplayHitPoints()
@@ -102,7 +123,6 @@ public class Target : MonoBehaviour
 
         currentHitText = hitTextOptions[Random.Range(0, hitTextOptions.Length)];
         currentHitText.text = points.ToString();
-        Debug.Log(points.ToString());
         StartCoroutine(HideHitText());
     }
 

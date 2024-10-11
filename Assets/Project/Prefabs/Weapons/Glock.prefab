@@ -762,7 +762,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 4103376374258659936}
   muzzleFlash: {fileID: 3004146536569262935}
   muzzleFlashPointLight: {fileID: 5668194856163565694}
-  audioClip: {fileID: 0}
+  gunFireSound: {fileID: 8300000, guid: 7e466e8052725fe40833a31821bb6f7f, type: 3}
 --- !u!82 &4084540862676778903
 AudioSource:
   m_ObjectHideFlags: 0

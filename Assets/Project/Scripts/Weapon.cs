@@ -23,8 +23,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] LightFlash muzzleFlashPointLight;
 
     [Header("Audio Settings")]
+    [SerializeField] AudioClip gunFireSound;
     AudioSource audioSource;
-    [SerializeField] AudioClip audioClip;
 
     private float timeLastShot;
     private int bullets;
@@ -85,7 +85,7 @@ public class Weapon : MonoBehaviour
         Renderer renderer = sphere.GetComponent<Renderer>();
         renderer.material.color = Color.yellow;
 
-        audioSource.PlayOneShot(audioClip);
+        audioSource.PlayOneShot(gunFireSound);
         
         if (muzzleFlash != null || muzzleFlashPointLight != null) {
             muzzleFlash.Play();
