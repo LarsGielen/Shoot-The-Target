@@ -1,32 +1,27 @@
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
     private int score = 0;
 
-    void Awake()
-    {
+    public event Action<int> OnScoreChanged;
+
+    void Awake() {
         if (instance == null)
-        {
             instance = this;
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
-    public void AddScore(int points)
-    {
+    public void AddScore(int points) {
         score += points;
-        Debug.Log(score);
-        UpdateScoreText();
+        OnScoreChanged?.Invoke(score);  
     }
 
-    void UpdateScoreText()
-    {
-        //TODO Text veld aanpassen
+    public void resetScore() {
+        score = 0;
+        OnScoreChanged?.Invoke(score);
     }
 }
