@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 33920960278335828}
   - component: {fileID: 23304885942391806}
   - component: {fileID: 64814216261905374}
-  - component: {fileID: 2080509371613823008}
-  - component: {fileID: 9047434677048663985}
   m_Layer: 0
   m_Name: SM_Prop_Target_01
   m_TagString: Untagged
@@ -109,36 +107,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43004275098325928, guid: b167d1e295259224194b5d15dcc007da, type: 2}
---- !u!114 &2080509371613823008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301019947510714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d667afb39883b9446a681b993e03e278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementDirection: 0
-  isMovableTarget: 1
-  speed: 2
-  travelDistance: 3
-  points: 10
-  canvas: {fileID: 8519517169523858081}
---- !u!114 &9047434677048663985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301019947510714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622e2125bb8b47640a9891a6ecbd7186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &169007551528127888
 GameObject:
   m_ObjectHideFlags: 0
