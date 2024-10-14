@@ -79,8 +79,10 @@ public class Target : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        {
             ScoreManager.instance.AddScore(points);
-        }
+    }
+
+    public void HitTarget() {
+        ScoreManager.instance.AddScore(points);
     }
 }

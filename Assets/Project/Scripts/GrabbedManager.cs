@@ -74,7 +74,7 @@ namespace AssemblySystem
                     return;
                 
                 lastReleasedGameObject = gameObject;
-                OnRelease?.Invoke((gameObject, false));
+                OnRelease?.Invoke((gameObject, true));
             }
             else if (grabbedGameObjects.right == gameObject) {
                 grabbedGameObjects.right = null;
@@ -82,7 +82,7 @@ namespace AssemblySystem
                     return;
                     
                 lastReleasedGameObject = gameObject;
-                OnRelease?.Invoke((gameObject, true));
+                OnRelease?.Invoke((gameObject, false));
             }
         }
     }
